@@ -51,21 +51,23 @@ public class Main {
             sc.close();
          */
 
+        /*
+
         // Ejercicio año bisiesto
 
-        /*
+
         Scanner sc = new Scanner(System.in);
+        int año;
         System.out.println("Ingresa un año: ");
-        int año = sc.nextInt();
+        año = sc.nextInt();
+        if(año % 4 == 0 && año % 100 != 0 || año % 400 == 0) {
+            System.out.println(año + " Es bisiesto.");
+        } else {
+            System.out.println(año + " No es bisiesto.");
+        }
+        sc.close();
 
-
-        if(año % 4 == 0) {
-            System.out.println("Es un año bisiesto");
-            if (año % 100 != 0 && 400 = 0) {
-                System.out.println("Es un año bisiesto");
-            } else {
-                 System.out.println("No es un año bisiesto");
-         */
+        */
 
         /*
 
@@ -77,7 +79,7 @@ public class Main {
         int numero1 = sc.nextInt();
         System.out.println("Ingresa otro numero: ");
         int numero2 = sc.nextInt();
-        System.out.println("Ingresa la operacion deseada: \n 1) Suma \n 2) Resta" + "\n 3) Multipliacacion \n 4) Division");
+        System.out.println("Ingresa la operacion deseada: \n 1) Suma \n 2) Resta \n 3) Multipliacacion \n 4) Division");
         int operacion = sc.nextInt();
         sc.nextLine();
         float resultado = 0;
@@ -97,24 +99,50 @@ public class Main {
                 break;
 
             default:
-                System.out.println("Error");
+                System.out.println("Operacion invalida.");
         }
 
-        select.close();
+        sc.close();
+        System.out.println(resultado);
+        */
 
-    */
+
 
         // Ejercicio semana
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Ingresa un numero: ");
-        int numero1 = sc.nextInt();
+        System.out.println("Ingresa un numero del 1 al 7: ");
+        int numero = sc.nextInt();
 
-
-
-
-
+        switch(numero) {
+            case 1:
+                System.out.println("Domingo");
+                break;
+            case 2:
+                System.out.println("Lunes");
+                break;
+            case 3:
+                System.out.println("Martes");
+                break;
+            case 4:
+                System.out.println("Miercoles");
+                break;
+            case 5:
+                System.out.println("Jueves");
+                break;
+            case 6:
+                System.out.println("Viernes");
+                break;
+            case 7:
+                System.out.println("Sabado");
+                break;
+            default:
+                System.out.println("Numero no valido.");
+        }
+        sc.close();
+        System.out.println(numero);
+            }
     }
-    }
-}
+
+
 
